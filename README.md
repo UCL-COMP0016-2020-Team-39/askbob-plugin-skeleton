@@ -8,7 +8,7 @@ A skeleton Ask Bob plugin.
 
 ### Building the Docker container
 
-**AskBob** can be built without support for voice with `docker-compose` using the following command:
+**AskBob** can be built without support for voice queries with `docker-compose` using the following command:
 ```bash
 $ docker-compose build voiceless
 ```

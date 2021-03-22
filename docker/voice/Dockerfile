@@ -7,16 +7,8 @@ RUN apt update && apt install -y build-essential git
 
 WORKDIR /askbob
 
-WORKDIR /askbob/installation
-RUN git clone https://github.com/UCL-COMP0016-2020-Team-39/AskBob
-WORKDIR /askbob/installation/AskBob
-
-RUN rm -rf plugins
-RUN python -m pip install -U pip setuptools wheel
-RUN python -m pip install -e .[voice]
+RUN python -m pip install -U pip setuptools wheel askbob[voice]
 RUN python -m spacy download en_core_web_md
-
-WORKDIR /askbob/build
 
 RUN mkdir data
 
